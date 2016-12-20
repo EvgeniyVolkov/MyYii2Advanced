@@ -66,6 +66,13 @@ class SiteStockController extends Controller
         $model = new SiteStock();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+//            echo '<pre>';
+//            print_r(Yii::$app->request->post());exit;
+//            if ($model->validate()) {
+//                echo 'data is valid';
+//            } else {
+//                echo 'data is not valid';exit;
+//            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -85,6 +92,15 @@ class SiteStockController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+//            echo '<pre>';
+//            print_r(Yii::$app->request->post());exit;
+//            if ($model->validate()) {
+//                echo 'data is valid';
+//            } else {
+//                echo 'data is not valid';exit;
+//            }
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

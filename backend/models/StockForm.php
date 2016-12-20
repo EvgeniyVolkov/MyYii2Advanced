@@ -14,7 +14,7 @@ class StockForm extends Model
     public function rules()
     {
         return [
-            [['mainText', 'description', 'link', 'img'], 'required'],
+            [['mainText', 'description', 'link', 'img'], 'safe'],
 //            ['email', 'email'],
         ];
     }
